@@ -20,7 +20,7 @@ class WeatherModel {
 
     return WeatherModel(
       forecastDayModel: forecastList,
-      locationModel: LocationModel.fromJson(json),
+      locationModel: LocationModel.fromJson(json['location']),
       current: CurrentModel.fromJson(json['current']),
     );
   }

@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                     style: TextStyle(color: Colors.white, fontSize: 30),
                   ),
                   Text(
-                    "Today,26 Jul",
+                    "Today,${weekDay(snapshot.data!.locationModel.localTime)}",
                     style: TextStyle(color: Colors.grey, fontSize: 17),
                   ),
                   SizedBox(height: 20),
@@ -200,9 +200,9 @@ class HomeScreen extends StatelessWidget {
 
   String weekDay(String time){
     final dateTime = DateTime.parse(time);
-    final getweek = DateFormat('EEE').format(dateTime);
+    final getWeek = DateFormat('MMM').format(dateTime);
     final getDate = DateFormat('dd').format(dateTime);
-    return "$getDate $getweek";
+    return "$getDate $getWeek";
   }
 
 }
