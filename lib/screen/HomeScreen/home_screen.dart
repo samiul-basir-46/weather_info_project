@@ -69,6 +69,8 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: 20),
                   Image.network(
                     "https:${snapshot.data!.current.condition.icon}",
+                    height: 100,
+                    width: 100,
                   ),
                   Text(
                     "${snapshot.data!.current.temp_c}°",
@@ -198,11 +200,10 @@ class HomeScreen extends StatelessWidget {
     return DateFormat('h a').format(dateTime);
   }
 
-  String weekDay(String time){
+  String weekDay(String time) {
     final dateTime = DateTime.parse(time);
     final getWeek = DateFormat('MMM').format(dateTime);
     final getDate = DateFormat('dd').format(dateTime);
     return "$getDate $getWeek";
   }
-
 }
