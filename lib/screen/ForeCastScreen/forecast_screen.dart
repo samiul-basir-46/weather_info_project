@@ -127,7 +127,6 @@ class ForecastScreen extends StatelessWidget {
                       primary: false,
                       itemBuilder: (context, index) {
                         final data2 = data1.forecastDayModel[index];
-
                         return Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -139,9 +138,10 @@ class ForecastScreen extends StatelessWidget {
                               ),
                             ),
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Image.network("https:${data2.icon}"),
-                                SizedBox(width: 14),
+                                SizedBox(width: 30),
                                 Text(
                                   data2.text,
                                   style: TextStyle(
